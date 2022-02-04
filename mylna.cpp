@@ -37,7 +37,7 @@ public:
       {
         lnx+=pow(-1,i)/(pow(mA,i+1))*pow((mX-mA),i+1)/(i+1);
       }
-        return lnx; /*zwraca 10 pierwszych wyrazow */ 
+        return lnx; /* lnX */
     }
     void setX(double) 
     {
