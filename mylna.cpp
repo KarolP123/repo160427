@@ -31,11 +31,17 @@ public:
     }
     double value(double mX, double mA) /*<! Zwraca wartosc w otoczeniu punktu a */
     {
+      double lnx = log(mA); /*<! logarytm naturalny z mA */
         
+      for(int i=0; i<10; i++) /* petla 10 wyrazów */
+      {
+        lnx+=pow(-1,i)/(pow(mA,i+1))*pow((mX-mA),i+1)/(i+1);
+      }
+        return lnx; /*zwraca 10 pierwszych wyrazow */ 
     }
     void setX(double) 
     {
-       mX = x; 
+       mX = x;  /* mX = x */
     }
     double getX()
     {
